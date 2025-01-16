@@ -2,14 +2,14 @@
 
 let friendsList = [];
 
-function agregarAmigo() {
-    let newFriend = document.getElementById('amigo').value;
-    
-    if(newFriend !== '') {
-        friendsList.push(newFriend);
-    } else {
-        alert('Por favor, inserte un nombre.');
-    }
+function actualizarListaAmigos() {
+    let listaAmigos = document.querySelector('.name-list');
 
-    document.getElementById('amigo').value = "";
+    listaAmigos.innerHTML = "";
+    
+    for(let i = 0; i < friendsList.length; i++) {
+        let item = document.createElement('li');
+        item.textContent = friendsList[i];
+        listaAmigos.appendChild(item);
+    }
 }
