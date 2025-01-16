@@ -32,6 +32,6 @@ function sortearAmigo() {
 
     if(friendsList.length >= 0) {
         let elegido = Math.floor(Math.random() * friendsList.length);
-        result.innerHTML = friendsList[elegido];
+        result.innerHTML = '¡Ganador/a ' + friendsList[elegido] + '!';
     }
 }
