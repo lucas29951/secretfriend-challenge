@@ -32,6 +32,6 @@ function sortearAmigo() {
 
     if(friendsList.length >= 0) {
         let elegido = Math.floor(Math.random() * friendsList.length);
-        result.innerHTML = '¡Ganador/a ' + friendsList[elegido] + '!';
+        result.innerHTML = 'El amigo secreto sorteado es: ' + friendsList[elegido];
     }
 }
