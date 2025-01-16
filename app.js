@@ -2,27 +2,11 @@
 
 let friendsList = [];
 
-function agregarAmigo() {
-    let newFriend = document.getElementById('amigo').value;
-    
-    if(newFriend !== '') {
-        friendsList.push(newFriend);
-    } else {
-        alert('Por favor, inserte un nombre.');
-    }
+function sortearAmigo() {
+    let result = document.getElementById('resultado');
 
-    document.getElementById('amigo').value = "";
-    actualizarListaAmigos();
-}
-
-function actualizarListaAmigos() {
-    let listaAmigos = document.querySelector('.name-list');
-
-    listaAmigos.innerHTML = "";
-    
-    for(let i = 0; i < friendsList.length; i++) {
-        let item = document.createElement('li');
-        item.textContent = friendsList[i];
-        listaAmigos.appendChild(item);
+    if(friendsList.length >= 0) {
+        let elegido = Math.floor(Math.random() * friendsList.length);
+        result.innerHTML = friendsList[elegido];
     }
 }
