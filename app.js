@@ -2,6 +2,19 @@
 
 let friendsList = [];
 
+function agregarAmigo() {
+    let newFriend = document.getElementById('amigo').value;
+    
+    if(newFriend !== '') {
+        friendsList.push(newFriend);
+    } else {
+        alert('Por favor, inserte un nombre.');
+    }
+
+    document.getElementById('amigo').value = "";
+    actualizarListaAmigos();
+}
+
 function actualizarListaAmigos() {
     let listaAmigos = document.querySelector('.name-list');
 
